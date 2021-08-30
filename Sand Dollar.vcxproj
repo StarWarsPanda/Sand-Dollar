@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{e87c12a5-c4e0-4ad0-9f27-df8256d07f59}</ProjectGuid>
+    <RootNamespace>Sand_Dollar</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)$(SolutionName)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(SolutionName)\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)$(SolutionName)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(SolutionName)\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)$(SolutionName)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(SolutionName)\Lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)$(SolutionName)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(SolutionName)\Lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\Users\mgmus\Desktop\Projects\Sand Dollar\Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>C:\Users\mgmus\Desktop\Projects\Sand Dollar\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>COPY /Y "$(SolutionDir)$(SolutionName)\Lib\x86\*.dll" "$(TargetDir)*.dll"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\SDL2\SDL2-2.0.14\x86_64-w64-mingw32\include;C:\Users\mgmus\Desktop\Projects\Sand_Dollar\Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL2_image.lib;SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\Users\mgmus\Desktop\Projects\Sand_Dollar\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>COPY /Y "$(SolutionDir)$(SolutionName)\Lib\x64\*.dll" "$(TargetDir)*.dll"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\Users\mgmus\Desktop\Projects\Sand Dollar\Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\mgmus\Desktop\Projects\Sand Dollar\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\SDL2\SDL2-2.0.14\x86_64-w64-mingw32\include;C:\Users\mgmus\Desktop\Projects\Sand_Dollar\Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\mgmus\Desktop\Projects\Sand_Dollar\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2_image.lib;SDL2.lib;SDL2_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MathExtras.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Entity.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\mgmus\Desktop\Projects\Sand Dollar\Lib\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\mgmus\Desktop\Projects\Sand Dollar\Lib\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\TileSet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\MathExtras.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Entity.h" />
+    <ClInclude Include="Include\SDL_image.h" />
+    <ClInclude Include="Include\SDL\SDL_image.h" />
+    <ClInclude Include="Include\SDL_ttf.h" />
+    <ClInclude Include="Include\SDL\SDL_ttf.h" />
+    <ClInclude Include="Include\SDL.h" />
+    <ClInclude Include="Include\SDL\SDL.h" />
+    <ClInclude Include="Include\SDL\begin_code.h" />
+    <ClInclude Include="Include\SDL\close_code.h" />
+    <ClInclude Include="Include\SDL\SDL_assert.h" />
+    <ClInclude Include="Include\SDL\SDL_atomic.h" />
+    <ClInclude Include="Include\SDL\SDL_audio.h" />
+    <ClInclude Include="Include\SDL\SDL_bits.h" />
+    <ClInclude Include="Include\SDL\SDL_blendmode.h" />
+    <ClInclude Include="Include\SDL\SDL_clipboard.h" />
+    <ClInclude Include="Include\SDL\SDL_config.h" />
+    <ClInclude Include="Include\SDL\SDL_config_android.h" />
+    <ClInclude Include="Include\SDL\SDL_config_iphoneos.h" />
+    <ClInclude Include="Include\SDL\SDL_config_macosx.h" />
+    <ClInclude Include="Include\SDL\SDL_config_minimal.h" />
+    <ClInclude Include="Include\SDL\SDL_config_pandora.h" />
+    <ClInclude Include="Include\SDL\SDL_config_psp.h" />
+    <ClInclude Include="Include\SDL\SDL_config_windows.h" />
+    <ClInclude Include="Include\SDL\SDL_config_winrt.h" />
+    <ClInclude Include="Include\SDL\SDL_config_wiz.h" />
+    <ClInclude Include="Include\SDL\SDL_copying.h" />
+    <ClInclude Include="Include\SDL\SDL_cpuinfo.h" />
+    <ClInclude Include="Include\SDL\SDL_egl.h" />
+    <ClInclude Include="Include\SDL\SDL_endian.h" />
+    <ClInclude Include="Include\SDL\SDL_error.h" />
+    <ClInclude Include="Include\SDL\SDL_events.h" />
+    <ClInclude Include="Include\SDL\SDL_filesystem.h" />
+    <ClInclude Include="Include\SDL\SDL_gamecontroller.h" />
+    <ClInclude Include="Include\SDL\SDL_gesture.h" />
+    <ClInclude Include="Include\SDL\SDL_haptic.h" />
+    <ClInclude Include="Include\SDL\SDL_hints.h" />
+    <ClInclude Include="Include\SDL\SDL_joystick.h" />
+    <ClInclude Include="Include\SDL\SDL_keyboard.h" />
+    <ClInclude Include="Include\SDL\SDL_keycode.h" />
+    <ClInclude Include="Include\SDL\SDL_loadso.h" />
+    <ClInclude Include="Include\SDL\SDL_locale.h" />
+    <ClInclude Include="Include\SDL\SDL_log.h" />
+    <ClInclude Include="Include\SDL\SDL_main.h" />
+    <ClInclude Include="Include\SDL\SDL_messagebox.h" />
+    <ClInclude Include="Include\SDL\SDL_metal.h" />
+    <ClInclude Include="Include\SDL\SDL_misc.h" />
+    <ClInclude Include="Include\SDL\SDL_mouse.h" />
+    <ClInclude Include="Include\SDL\SDL_mutex.h" />
+    <ClInclude Include="Include\SDL\SDL_name.h" />
+    <ClInclude Include="Include\SDL\SDL_opengl.h" />
+    <ClInclude Include="Include\SDL\SDL_opengles.h" />
+    <ClInclude Include="Include\SDL\SDL_opengles2.h" />
+    <ClInclude Include="Include\SDL\SDL_opengles2_gl2.h" />
+    <ClInclude Include="Include\SDL\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="Include\SDL\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="Include\SDL\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="Include\SDL\SDL_opengl_glext.h" />
+    <ClInclude Include="Include\SDL\SDL_pixels.h" />
+    <ClInclude Include="Include\SDL\SDL_platform.h" />
+    <ClInclude Include="Include\SDL\SDL_power.h" />
+    <ClInclude Include="Include\SDL\SDL_quit.h" />
+    <ClInclude Include="Include\SDL\SDL_rect.h" />
+    <ClInclude Include="Include\SDL\SDL_render.h" />
+    <ClInclude Include="Include\SDL\SDL_revision.h" />
+    <ClInclude Include="Include\SDL\SDL_rwops.h" />
+    <ClInclude Include="Include\SDL\SDL_scancode.h" />
+    <ClInclude Include="Include\SDL\SDL_sensor.h" />
+    <ClInclude Include="Include\SDL\SDL_shape.h" />
+    <ClInclude Include="Include\SDL\SDL_stdinc.h" />
+    <ClInclude Include="Include\SDL\SDL_surface.h" />
+    <ClInclude Include="Include\SDL\SDL_system.h" />
+    <ClInclude Include="Include\SDL\SDL_syswm.h" />
+    <ClInclude Include="Include\SDL\SDL_test.h" />
+    <ClInclude Include="Include\SDL\SDL_test_assert.h" />
+    <ClInclude Include="Include\SDL\SDL_test_common.h" />
+    <ClInclude Include="Include\SDL\SDL_test_compare.h" />
+    <ClInclude Include="Include\SDL\SDL_test_crc32.h" />
+    <ClInclude Include="Include\SDL\SDL_test_font.h" />
+    <ClInclude Include="Include\SDL\SDL_test_fuzzer.h" />
+    <ClInclude Include="Include\SDL\SDL_test_harness.h" />
+    <ClInclude Include="Include\SDL\SDL_test_images.h" />
+    <ClInclude Include="Include\SDL\SDL_test_log.h" />
+    <ClInclude Include="Include\SDL\SDL_test_md5.h" />
+    <ClInclude Include="Include\SDL\SDL_test_memory.h" />
+    <ClInclude Include="Include\SDL\SDL_test_random.h" />
+    <ClInclude Include="Include\SDL\SDL_thread.h" />
+    <ClInclude Include="Include\SDL\SDL_timer.h" />
+    <ClInclude Include="Include\SDL\SDL_touch.h" />
+    <ClInclude Include="Include\SDL\SDL_types.h" />
+    <ClInclude Include="Include\SDL\SDL_version.h" />
+    <ClInclude Include="Include\SDL\SDL_video.h" />
+    <ClInclude Include="Include\SDL\SDL_vulkan.h" />
+    <ClInclude Include="src\TileSet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lib\x64\SDL2.dll" />
+    <None Include="Lib\x64\SDL2_ttf.dll" />
+    <None Include="Lib\x64\zlib1.dll" />
+    <None Include="Lib\x64\libfreetype-6.dll" />
+    <None Include="Lib\x64\SDL2_image.dll" />
+    <None Include="Lib\x64\libjpeg-9.dll" />
+    <None Include="Lib\x64\libpng16-16.dll" />
+    <None Include="Lib\x64\libtiff-5.dll" />
+    <None Include="Lib\x64\libwebp-7.dll" />
+    <None Include="Lib\x86\SDL2.dll" />
+    <None Include="Lib\x86\SDL2_ttf.dll" />
+    <None Include="Lib\x86\zlib1.dll" />
+    <None Include="Lib\x86\libfreetype-6.dll" />
+    <None Include="Lib\x86\SDL2_image.dll" />
+    <None Include="Lib\x86\libjpeg-9.dll" />
+    <None Include="Lib\x86\libpng16-16.dll" />
+    <None Include="Lib\x86\libtiff-5.dll" />
+    <None Include="Lib\x86\libwebp-7.dll" />
+    <None Include="Resc\Ocean.tilemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Lib\x64\SDL2.lib" />
+    <Library Include="Lib\x64\SDL2main.lib" />
+    <Library Include="Lib\x64\SDL2test.lib" />
+    <Library Include="Lib\x64\SDL2_ttf.lib" />
+    <Library Include="Lib\x64\SDL2_image.lib" />
+    <Library Include="Lib\x86\SDL2.lib" />
+    <Library Include="Lib\x86\SDL2main.lib" />
+    <Library Include="Lib\x86\SDL2test.lib" />
+    <Library Include="Lib\x86\SDL2_ttf.lib" />
+    <Library Include="Lib\x86\SDL2_image.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resc\Bird_anim\Bird_Anim1.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim10.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim2.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim3.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim4.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim5.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim6.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim7.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim8.png" />
+    <Image Include="Resc\Bird_anim\Bird_Anim9.png" />
+    <Image Include="Resc\Button\B_Down.png" />
+    <Image Include="Resc\Button\B_Up.png" />
+    <Image Include="Resc\Image_Main\Intro_Main1.png" />
+    <Image Include="Resc\Image_Main\Intro_Main10.png" />
+    <Image Include="Resc\Image_Main\Intro_Main11.png" />
+    <Image Include="Resc\Image_Main\Intro_Main12.png" />
+    <Image Include="Resc\Image_Main\Intro_Main13.png" />
+    <Image Include="Resc\Image_Main\Intro_Main14.png" />
+    <Image Include="Resc\Image_Main\Intro_Main15.png" />
+    <Image Include="Resc\Image_Main\Intro_Main16.png" />
+    <Image Include="Resc\Image_Main\Intro_Main17.png" />
+    <Image Include="Resc\Image_Main\Intro_Main2.png" />
+    <Image Include="Resc\Image_Main\Intro_Main3.png" />
+    <Image Include="Resc\Image_Main\Intro_Main4.png" />
+    <Image Include="Resc\Image_Main\Intro_Main5.png" />
+    <Image Include="Resc\Image_Main\Intro_Main6.png" />
+    <Image Include="Resc\Image_Main\Intro_Main7.png" />
+    <Image Include="Resc\Image_Main\Intro_Main8.png" />
+    <Image Include="Resc\Image_Main\Intro_Main9.png" />
+    <Image Include="Resc\Main_Banner.png" />
+    <Image Include="Resc\Main_image.png" />
+    <Image Include="Resc\Sand_7_palette.png" />
+    <Image Include="Resc\Sand_Dollar.png" />
+    <Image Include="Resc\Sand_dollar_Text.png" />
+    <Image Include="Resc\Text\0.png" />
+    <Image Include="Resc\Text\1.png" />
+    <Image Include="Resc\Text\2.png" />
+    <Image Include="Resc\Text\3.png" />
+    <Image Include="Resc\Text\4.png" />
+    <Image Include="Resc\Text\5.png" />
+    <Image Include="Resc\Text\6.png" />
+    <Image Include="Resc\Text\7.png" />
+    <Image Include="Resc\Text\8.png" />
+    <Image Include="Resc\Text\9.png" />
+    <Image Include="Resc\Text\A.png" />
+    <Image Include="Resc\Text\B.png" />
+    <Image Include="Resc\Text\C.png" />
+    <Image Include="Resc\Text\D.png" />
+    <Image Include="Resc\Text\E.png" />
+    <Image Include="Resc\Text\F.png" />
+    <Image Include="Resc\Text\G.png" />
+    <Image Include="Resc\Text\H.png" />
+    <Image Include="Resc\Text\I.png" />
+    <Image Include="Resc\Text\J.png" />
+    <Image Include="Resc\Text\K.png" />
+    <Image Include="Resc\Text\L.png" />
+    <Image Include="Resc\Text\M.png" />
+    <Image Include="Resc\Text\N.png" />
+    <Image Include="Resc\Text\O.png" />
+    <Image Include="Resc\Text\P.png" />
+    <Image Include="Resc\Text\Q.png" />
+    <Image Include="Resc\Text\R.png" />
+    <Image Include="Resc\Text\S.png" />
+    <Image Include="Resc\Text\T.png" />
+    <Image Include="Resc\Text\U.png" />
+    <Image Include="Resc\Text\V.png" />
+    <Image Include="Resc\Text\W.png" />
+    <Image Include="Resc\Text\X.png" />
+    <Image Include="Resc\Text\Y.png" />
+    <Image Include="Resc\Text\Z.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
